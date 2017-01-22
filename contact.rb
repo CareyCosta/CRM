@@ -65,9 +65,22 @@ class Contact
   # but it should allow you to search for a contact using attributes other than id
   # by specifying both the name of the attribute and the value
   # eg. searching for 'first_name', 'Betty' should return the first contact named Betty
-  def self.find_by
-
-  end
+  def self.find_by(attr, value)
+    @@contacts.each do |contact|
+      if attr == 'first_name' && value == contact.first_name
+        return contact
+      end
+      if attr == 'last_name' && value == contact.last_name
+        return contact
+      end
+      if attr == 'email' && value == contact.email
+        return contact
+      end
+      if attr == 'note' && value == contact.note 
+        return contact
+      end
+    end
+    end
 
   # This method should delete all of the contacts
   def self.delete_all
