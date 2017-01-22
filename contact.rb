@@ -76,7 +76,7 @@ class Contact
       if attr == 'email' && value == contact.email
         return contact
       end
-      if attr == 'note' && value == contact.note 
+      if attr == 'note' && value == contact.note
         return contact
       end
     end
@@ -84,7 +84,7 @@ class Contact
 
   # This method should delete all of the contacts
   def self.delete_all
-    @@contacts
+    @@contacts.clear
   end
 
   def full_name
