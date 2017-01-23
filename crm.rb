@@ -53,7 +53,12 @@ class CRM
   end
 
   def modify_existing_contact
+    display_all_contacts
+    puts "Enter Contact ID to modify"
+    id = gets.chomp.to_i
+    modify_contact = Contact.find(id)
 
+    attributes
   end
 
   def delete_contact
